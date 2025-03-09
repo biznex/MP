@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="css/login_styles.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/header_script.js"></script>
+    <script defer src="js/login_script.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="BizNex Logo">
+    </a>
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#" id="login-text-white" class="start-button">Login / Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="section left">
+        <h2>For <span class="highlight">Businesses</span></h2>
+        <p>Curated for businesses to find top talent and grow.</p>
+        <button class="login-btn" id="business-login">Login</button>
+        <p class="no-account">Don't have an account?</p>
+        <a href="#" class="register-link" id="business-register">Register as Business</a>
+    </div>
+
+    <div class="section right">
+        <h2>For <span class="highlight">Job Aspirants</span></h2>
+        <p>Curated for job seekers to find new opportunities.</p>
+        <button class="login-btn outline" id="job-login">Login</button>
+        <p class="no-account">Don't have an account?</p>
+        <a href="#" class="register-link" id="job-register">Sign up as Job Aspirant</a>
+    </div>
+</div>
+
+
+<!-- Business Login Popup -->
+<div id="business-login-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <h2>Business Login</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit" class="login-submit">Login</button>
+
+            <div class="or-divider">----- OR -----</div>
+
+            <div class="google-signin">
+                <img src="img/google.svg" alt="Google Logo">
+                <span>Sign in with Google</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Job Aspirant Login Popup -->
+<div id="job-login-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-job-popup">&times;</span>
+        <h2>Job Aspirant Login</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit" class="login-submit">Login</button>
+        </form>
+        <div class="or-divider">----- OR -----</div>
+        <div class="google-signin">
+            <img src="img/google.svg" alt="Google Logo">
+            <span>Sign in with Google</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Business Registration Popup -->
+<div id="business-register-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-business-register">&times;</span>
+        <h2>Business Registration</h2>
+        <form>
+            <input type="text" placeholder="Business Name" required>
+            <input type="text" placeholder="Owner Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Business Address" required>
+            
+            <!-- Password fields side by side -->
+            <div class="password-container">
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" class="register-submit">Register</button>
+        </form>
+        
+        <div class="or-divider">----- OR -----</div>
+        
+        <div class="google-signin">
+            <img src="img/google.svg" alt="Google Logo">
+            <span>Sign in with Google</span>
+        </div>
+    </div>
+</div>
+
+<!-- JOB REGISTRATION POPUP -->
+<!-- Job Aspirant Registration Popup -->
+<div id="job-register-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-job-register">&times;</span>
+        <h2>Job Aspirant Registration</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            
+            <!-- DOB Field with Auto-Formatting and Calendar Picker -->
+            <input type="text" id="job-dob" placeholder="Date of Birth (DD/MM/YYYY)" maxlength="10" required>
+            <input type="date" id="job-dob-calendar" style="display: none;">
+            
+            <!-- Password fields -->
+            <div class="password-container">
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" class="register-submit">Register</button>
+        </form>
+
+        <div class="or-divider">----- OR -----</div>
+
+        <div class="google-signin">
+            <img src="img/google.svg" alt="Google Logo">
+            <span>Sign in with Google</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
