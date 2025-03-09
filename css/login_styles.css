@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist&display=swap');
+
+body {
+    font-family: 'Geist', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-image: url('../img/section_1_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: -1;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;  /* Vertically center logo and text */
+    justify-content: space-between;
+    padding: 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+.logo img {
+    height: 30px;  /* Adjust the height of the logo to align with text */
+    width: auto;
+    display: block;
+    object-fit: contain; /* Ensures the logo is not distorted */
+}
+
+a.logo {
+    text-decoration: none;
+}
+
+/* Navigation Styling */
+.desktop-nav {
+    display: flex;
+    align-items: center;  /* Vertically align the navigation links */
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    align-items: center;  /* Align the navigation items vertically */
+    z-index: 999;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: #232223;
+}
+
+.start-button {
+    background-color: #457AFF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#login-text{
+  color:white
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.line {
+    height: 4px;
+    background-color: #232223;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    padding: 20px;
+}
+
+.nav.open {
+    display: flex;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0rem;
+    cursor: pointer;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center align text */
+}
+
+.nav li {
+    margin: 10px 0; /* Space between items */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #232223;
+    font-size: 1.5rem; /* Adjust font size */
+    display: block; /* Make the link a block element for better spacing */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 20;
+    }
+
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 0rem; /* Ensure it's visible */
+        cursor: pointer;
+    }
+
+    .nav a {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .start-button {
+        font-size: 1.5rem;
+        padding: 12px 24px;
+    }
+
+    .hamburger.open .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open .line:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+    }
+
+    .hamburger.open .line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+/* Main Container */
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  }
+  
+  .section {
+  flex: 1;
+  padding: 50px;
+  text-align: center;
+  }
+  
+  h2 {
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  }
+  
+  h2 .highlight {
+  color: #447AFE;
+  }
+  
+  p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  }
+  
+  .left .login-btn {
+  background: #447AFE;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #447AFE;
+  }
+  
+  .right .login-btn {
+  background: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  }
+  
+  #login-text-white
+  {
+    color:white;
+  }
+  .right .login-btn.outline {
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  }
+  
+  .no-account {
+  margin-top: 50px; /* Keep spacing from button */
+  font-size: 16px;
+  color: black;
+  }
+  
+  .register-link {
+  display: block;
+  margin-top: -20px; /* Negative margin to reduce space */
+  font-size: 16px;
+  font-weight: bold;
+  color: #447AFE;
+  text-decoration: none;
+  }
+  
+  .register-link:hover {
+  text-decoration: underline;
+  }
+
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+  .container {
+  flex-direction: column;
+  width: 90%;
+  }
+  .section {
+    padding: 20px 10px; /* Reduce padding */
+  }
+  
+
+  .section:first-child {
+    padding-top: 2px;
+    padding-bottom: 2px; /* Adjust as needed */
+  }
+
+  /* Reduce top padding for the second section */
+  .section:last-child {
+    padding-top: 2px; /* Adjust as needed */
+  }
+
+
+  h2 {
+  font-size: 32px;
+  }
+  }
+
+
+
+
+
+  /* Popup Styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Input Fields */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+}
+
+.popup-content h2 {
+    font-size: 150%; /* Half the original size */
+    margin-bottom: 15px;
+}
+
+.popup-content form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content input {
+    width: 90%; /* Adjust width for better alignment */
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Centers placeholder text */
+    font-size: 14px;
+}
+
+.popup-content button {
+    width: 95%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.password-container {
+    display: flex;
+    gap: 10px; /* Space between fields */
+    width: 95%;
+}
+
+.password-container input {
+    flex: 1; /* Makes both inputs take equal space */
+    width: 50%; /* Ensures they stay side by side */
+}
+
+
+.or-divider {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #666;
+}
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 95%; /* Match input width */
+}
+
+.google-signin img {
+    width: 20px;
+    height: 20px;
+}
+
+.google-signin span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
