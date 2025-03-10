@@ -90,6 +90,20 @@
         <h2>Business Registration</h2>
         <form>
             <input type="text" placeholder="Business Name" required>
+            
+            <!-- Business Category Dropdown -->
+            <select id="business-category" required>
+                <option value="" disabled selected>Choose Business Category</option>
+                <option value="Retail & E-commerce">Retail & E-commerce</option>
+                <option value="Food & Beverage">Food & Beverage</option>
+                <option value="Education & Consulting">Education & Consulting</option>
+                <option value="Home & Lifestyle Services">Home & Lifestyle Services</option>
+                <option value="Others">Others</option>
+            </select>
+            
+            <!-- Custom Category Input (Hidden by Default) -->
+            <input type="text" id="custom-category" placeholder="Specify Business Category" style="display: none;" required>
+            
             <input type="text" placeholder="Owner Name" required>
             <input type="email" placeholder="Email" required>
             <input type="tel" placeholder="Phone Number" required>
@@ -112,6 +126,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- JOB REGISTRATION POPUP -->
 <!-- Job Aspirant Registration Popup -->
