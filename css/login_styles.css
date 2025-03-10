@@ -444,3 +444,52 @@ a.logo {
     font-weight: bold;
     color: #333;
 }
+
+/* Business Category Dropdown */
+#business-category {
+    width: 90%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    appearance: none; /* Hides default dropdown arrow */
+    cursor: pointer;
+    text-align: center; /* Aligns placeholder text */
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Custom Dropdown Arrow */
+#business-category {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23333" d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+}
+
+/* Hover and Focus Effects */
+#business-category:hover,
+#business-category:focus {
+    border-color: #007bff;
+}
+
+/* Disabled Option Style */
+#business-category option:disabled {
+    color: #999;
+}
+
+/* Custom Input for 'Others' Option */
+#custom-category {
+    width: 90%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#custom-category:focus {
+    border-color: #007bff;
+}
