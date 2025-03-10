@@ -65,6 +65,21 @@ document.addEventListener("DOMContentLoaded", function () {
 //BUSINESS REGGGGGGGG
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
+     // Business Category Dropdown Logic
+     document.getElementById('business-category').addEventListener('change', function() {
+        var customCategory = document.getElementById('custom-category');
+        if (this.value === 'Others') {
+            customCategory.style.display = 'block';
+            customCategory.required = true;
+        } else {
+            customCategory.style.display = 'none';
+            customCategory.required = false;
+        }
+    });
+
+
     const businessLoginBtn = document.getElementById("business-login");
     const businessLoginPopup = document.getElementById("business-login-popup");
     const businessCloseBtn = document.getElementById("close-popup");
@@ -116,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //JOB REGGGGGGGGG
 
 document.addEventListener("DOMContentLoaded", function () {
+   
     // Elements for Job Aspirant Registration
     const jobRegisterBtn = document.getElementById("job-register");
     const jobRegisterPopup = document.getElementById("job-register-popup");
